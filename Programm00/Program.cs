@@ -5,7 +5,9 @@ public class Programm00{
     public static int Main(string[] args){
         Average_Calculator calc = new();
         calc.Add(5);
-        Console.WriteLine(calc.Get_Elements());
+        double[] arr = {1, 2, 3};
+        calc.Add(arr);
+        Console.WriteLine(calc);
         return 0;
     }
 }

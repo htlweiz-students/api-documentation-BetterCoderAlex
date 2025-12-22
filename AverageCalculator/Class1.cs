@@ -4,11 +4,18 @@ public class Average_Calculator
 {
     private double[] intern_val = [];
     private double avg;
-    private double sum;
+    
+    /// <summary>
+    /// Adds a double value to an array
+    /// </summary>
+    /// <param name="double_val">double value</param>
     public void Add(double val){
         intern_val = intern_val.Append(val).ToArray();
     }
-
+    /// <summary>
+    /// Adds multiple double values
+    /// </summary>
+    /// <param name="val">double value1, double value2...</param>
     public void Add(double[] val){
         if(val.Length == 0){
             Console.WriteLine("The Length of the Array is zero!");
@@ -21,6 +28,7 @@ public class Average_Calculator
     }
 
     public double GetAverage(){
+        double sum = 0;
         if (intern_val.Length == 0){
             Console.WriteLine("The Length of the Array is zero!");
         }
@@ -39,10 +47,5 @@ public class Average_Calculator
 
     public int count(){
         return intern_val.Length;
-    }
-
-    public override string ToString()
-    {
-        return $"{intern_val[0]}";
     }
 }
