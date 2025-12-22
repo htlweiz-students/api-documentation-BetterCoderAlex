@@ -27,10 +27,10 @@ public class UnitTest1
     }
 
     [Fact]
-    public void Add_Array(){
+    public void Add_Array_with_Zero_Elements(){
         var calculator = new Average_Calculator();
-        double[] arr = {1, 2, 3};
-        double[] arr_expected = {1, 2, 3};
+        double[] arr = {};
+        double[] arr_expected = {};
         calculator.Add(arr);
         Assert.Equal(calculator.Get_Elements(), arr_expected);
     }
